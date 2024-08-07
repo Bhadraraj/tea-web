@@ -140,8 +140,19 @@ body {
 .teaManuSec,
 .aboutUsSection,
 .OurTeas,
-.teaManuSec {
-  padding: 30px 10px;
+.teaManuSec,
+.shopNowSec,
+.ourProducts {
+  padding: 50px 10px;
+}
+
+.ourProducts li {
+  color: var(--primary-color);
+}
+
+.ourProducts h2 {
+  color: var(--secondary-color);
+  text-align: center;
 }
 
 .aboutUsSection,
@@ -393,12 +404,16 @@ input {
   background-color: var(--primary-color);
   color: var(--teritary-color);
   border: none;
-  padding: 5px 10px;
+  padding: 10px 15px;
   border-radius: 1px 20px;
+  transition: 1s;
+}
+.bannnerBtn:hover {
+  background-color: var(--secondary-color);
 }
 
 .outer-BannerCont h6 {
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .outer-BannerCont h1 {
@@ -408,12 +423,13 @@ input {
 }
 
 .outer-BannerCont {
-  background-image: url(./images/secOneBg.png);
+  background-color: #333;
+  /* background-image: url(./images/secOneBg.png); */
   /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 580px;
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat;/ */
+  /* height: 580px; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -421,7 +437,8 @@ input {
 }
 
 .inner-BannerCont {
-  background-color: rgb(17 17 17 / 80%);
+
+  background-color: rgb(211 255 196 / 80%);
   /* Light background color with transparency */
   padding: 20px;
   padding: 165px 50px 50px;
@@ -826,9 +843,15 @@ button.navbar-toggler {
 .outerButnCont button {
   margin: 0px !important;
 }
-h2{
+
+h2 {
   font-size: 42px !important;
 }
+
+.ourProducts {
+  background-color: var(--fade-color);
+}
+
 .otherProductsSection {
   padding: 20px;
   /* background-color: #f9f9f9;
@@ -839,6 +862,11 @@ h2{
   text-align: left;
 }
 
+.teaManuSec h2,
+.shopNowSec h2 {
+  color: var(--primary-color);
+}
+
 .otherProductsSection h2 {
   color: #333;
   font-size: 24px;
@@ -846,19 +874,82 @@ h2{
   text-align: center;
 }
 
+.text-secondaryClr {
+  color: var(--secondary-color);
+}
+
+.text-primaryClr {
+  color: var(--primary-color);
+}
+
 .productList {
   list-style-type: none;
   padding: 0;
 }
 
+.contactUsSec svg {
+  color: var(--primary-color);
+  font-size: 23px;
+  transition: 1s;
+}
+
+.contactUsSec .contacticon {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: var(--fade-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+  padding: 5px;
+
+  border-radius: 50%;
+}
+
+.contacticon:hover svg {
+  color: var(--secondary-color);
+  transform: rotateY(360deg)
+}
+
+.contactUsSec H2 {
+  color: var(--primary-color);
+}
+
+
+.contactUsSec label {
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+
+iframe {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* border: red; */
+  border: 2px solid var(--primary-color) !important;
+  border-radius: 34px;
+  padding: 20px;
+}
+
+.form-control:focus {
+  color: var(--bs-body-color);
+
+  border-color: var(--secondary-color) !important;
+  outline: 0;
+  box-shadow: 0.1px 0.1px 2px var(--secondary-color) !important;
+}
+
+
+
 .productList li {
   font-size: 18px;
-  color: #555;
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
 .productList strong {
-  color: #000;
+  color: var(--primary-color);
   display: block;
   margin-bottom: 5px;
 }
@@ -869,7 +960,8 @@ h2{
   color: #666;
 }
 
-.aboutUsSection h2, .OurTeas h2{
+.aboutUsSection h2,
+.OurTeas h2 {
   color: var(--secondary-color);
 }
 
@@ -991,7 +1083,7 @@ footer h6 {
 
 
   .inner-BannerCont {
-    background-color: rgb(17 17 17 / 80%);
+
     padding: 20px;
     height: fit-content;
     padding: 130px 50px 50px;

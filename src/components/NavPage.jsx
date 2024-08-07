@@ -71,6 +71,15 @@ export default function NavPage() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
+{/* 
+            <div className="row">
+                <div className="col-md-6"></div>
+                <div className="col-md-6">    
+                    <img src="./images/banner-right.png" className='img-fluid' alt="" />
+                </div>
+
+            </div> */}
             {/* 
             <div
                 className='p-5 text-center bg-image'
@@ -78,13 +87,18 @@ export default function NavPage() {
 
 
 
-            <div class="outer-BannerCont">
+            {/* <div class="outer-BannerCont">
                 <div className="container">
                     <div className="row">
+                        <div className="col-12">
+                            <img src="./images/Desktop-2.png" className='img-fluid' alt="" />
+                        </div>
+                    </div> */}
+            {/* <div className="row">
                         <div className="col-12 px-0">
                             <div class="inner-BannerCont">
 
-                                <div className='text-white text-start'>
+                                <div className='text-start'>
 
 
                                     <h1 className='mb-3'>"Sereni Tea Hills - Tea for Your Peaceful Moments" </h1>
@@ -104,17 +118,17 @@ export default function NavPage() {
 
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
-
-                    {/* </div> */}
-
-
-
+            {/* 
+                </div> */}
 
 
 
-                    {/* <div className='mask p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', height: '100vh' }} >
+
+
+
+            {/* <div className='mask p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', height: '100vh' }} >
                     <div className='d-flex justify-content-center align-items-center w-100'>
 
 
@@ -138,8 +152,8 @@ export default function NavPage() {
 
                     </div>
                 </div> */}
-                </div>
-            </div>
+            {/* </div> */}
+            {/* </div> */}
         </header >
     );
 }

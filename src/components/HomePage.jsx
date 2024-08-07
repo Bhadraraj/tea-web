@@ -6,6 +6,7 @@ import TeaManufactProcess from './TeaManufactProcess'
 import OurTea from './OurTea'
 import ShopNowHome from './ShopNowHome'
 
+import ContactUs from './ContactUs'
 import OurOtherProducts from './OurOtherProducts'
 
 
@@ -21,6 +22,7 @@ const HomePage = () => {
      
             <ShopNowHome />
             <OurOtherProducts />
+            <ContactUs/>
 
 
 
