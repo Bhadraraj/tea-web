@@ -32,20 +32,16 @@ const Maincontent = () => {
         { id: 10, name: "Oolong Tea 1kg", price: 1560, quantity: 0, img: '../images/oolong tea.webp' },
         { id: 11, name: "Serenity Spice Symphony 500g", price: 780, quantity: 0, img: '../images/cardamom-tea.webp' },
         { id: 12, name: "Serenity Spice Symphony 1kg", price: 1560, quantity: 0, img: '../images/cardamom-tea.webp' },
-        { id: 12, name: "Ginger Serenitea 500g", price: 780, quantity: 0, img: '../images/newgtea.png' },
-        { id: 12, name: "Ginger Serenitea 1kg", price: 1560, quantity: 0, img: '../images/newgtea.png' },
+     
         { id: 13, name: "Soothing Chamomile 500g", price: 1560, quantity: 0, img: '../images/chamomile-tea.webp' },
         { id: 14, name: "Soothing Chamomile 1kg", price: 1560, quantity: 0, img: '../images/chamomile-tea.webp' },
         { id: 15, name: "Hibiscus Dream 500g", price: 780, quantity: 0, img: '../images/hibiscusteaaa.jpeg' },
         { id: 16, name: "Hibiscus Dream 1kg", price: 1560, quantity: 0, img: '../images/hibiscusteaaa.jpeg' },
         { id: 17, name: "Citrus Bliss 500g", price: 780, quantity: 0, img: '../images/Lemon tea.jpg' },
         { id: 18, name: "Citrus Bliss 1kg", price: 1560, quantity: 0, img: '../images/Lemon tea.jpg' },
+        { id: 19, name: "Homemade chocolate 500g", price: 750, quantity: 0, img: '../images/homechoc.jpg' },
         { id: 20, name: "Homemade chocolate 500g", price: 750, quantity: 0, img: '../images/homechoc.jpg' },
-        { id: 20, name: "Varkey 500g", price: 480, quantity: 0, img: '../images/varkey.jpg' },
-        { id: 20, name: "Coffee 500g", price: 290, quantity: 0, img: '../images/coffee 2.jpg' },
-        { id: 20, name: "Coffee 1Kg", price: 580, quantity: 0, img: '../images/coffee 2.jpg' },
-        { id: 19, name: "Tea Bag-Any Flavour(Pack of 3)", price: 850, quantity: 0, img: '../images/teabag.jpg' },
-        { id: 20, name: "Tea Infuser pot", price: 1299, quantity: 0, img: '../images/teainfuser.jpg' },
+
 
     ]);
 

@@ -408,9 +408,9 @@ input {
   border-radius: 1px 20px;
   transition: 1s;
 }
-.bannnerBtn:hover {
+/* .bannnerBtn:hover {
   background-color: var(--secondary-color);
-}
+} */
 
 .outer-BannerCont h6 {
   font-size: 18px;
@@ -438,18 +438,21 @@ input {
 
 .inner-BannerCont {
 
-  background-color: rgb(211 255 196 / 80%);
+  background-color: rgba(255, 255, 255, 0.8);
   /* Light background color with transparency */
   padding: 20px;
   padding: 165px 50px 50px;
-  height: 580px;
+
   width: 100%;
   border-radius: 10px;
 
 }
-
+.inner-BannerCont h1{
+  color:#b1b23a;
+}
 .inner-BannerCont h6 {
   line-height: 30px;
+  color: #646c1a;
 }
 
 
@@ -907,9 +910,33 @@ h2 {
   border-radius: 50%;
 }
 
-.contacticon:hover svg {
+.contactUsSec .contacticon:hover svg {
   color: var(--secondary-color);
-  transform: rotateY(360deg)
+  /* transform: rotateY(360deg); */
+   transition: 1.2s;
+}
+.inner-BannerCont .contacticon svg{
+  color: var(--primary-color);
+  font-size: 22px;
+}
+.inner-BannerCont .contacticon {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-color: var(--fade-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+  padding: 5px;
+
+  border-radius: 50%;
+}
+
+.inner-BannerCont .contacticon:hover svg {
+  color: var(--secondary-color);
+  /* transform: rotateY(360deg); */
+  transition: 1.2s
 }
 
 .contactUsSec H2 {

@@ -1,33 +1,22 @@
 import { Container, Row, Col, ListGroup, Button } from 'react-bootstrap';
 import { RiDeleteBin5Line } from 'react-icons/ri';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Cart = ({ cart, calculateTotalPrice, removeFromCart }) => {
     return (
         <>
-            <div>
-                {(cart) ? (
-
-                    <div className='container text-center py-4 px-0'>
-
-                        <h2> Your Cart</h2 >
-                        <h4 className='pt-4'><b>Cart is empty !</b></h4>
+            <div className='container text-center py-4 px-0'>
+                {cart.length === 0 ? (
+                    <>
+                        <h2>Your Cart</h2>
+                        <h4 className='pt-4'><b>Cart is empty!</b></h4>
                         <button className='shopnowbtn'>
                             <Link to="/shopnow">Shop Now</Link>
                         </button>
-
-
-                    </div>
-
-
-
+                    </>
                 ) : (
-
-
-                    
-
-                    <div className='container text-center py-4 px-0'>
-
+                    <>
+                        <h2>Your Cart</h2>
                         <Row className='py-4'>
                             <Col md={4}>
                                 <h4>Product</h4>
@@ -41,7 +30,6 @@ const Cart = ({ cart, calculateTotalPrice, removeFromCart }) => {
                         </Row>
                         <ListGroup variant="flush">
                             {cart.map((product) => (
-
                                 <ListGroup.Item key={product.id}>
                                     <Row>
                                         <Col md={4}>
@@ -56,22 +44,17 @@ const Cart = ({ cart, calculateTotalPrice, removeFromCart }) => {
                                             = Rs {product.totalPrice}
                                         </Col>
                                     </Row>
-
                                 </ListGroup.Item>
                             ))}
-                            <h5>Total Price : Rs {calculateTotalPrice()}</h5>
+                            <h5>Total Price: Rs {calculateTotalPrice()}</h5>
                             <h5>Taxes and shipping calculated after Placing Order</h5>
-                            <button className=' btncart'>
+                            <button className='btn btn-primary'>
                                 <Link to="/login">Place Order</Link>
                             </button>
                         </ListGroup>
-
-                    </div >
-
-                )
-
-                }
-            </div >
+                    </>
+                )}
+            </div>
         </>
     );
 };

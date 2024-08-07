@@ -8,6 +8,13 @@ import { FaUserCircle } from "react-icons/fa";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { Link } from 'react-router-dom'
 import { RiShoppingBag4Line } from "react-icons/ri";
+
+
+import { AiFillInstagram } from "react-icons/ai";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
+
 export default function NavPage() {
     const [showBasic, setShowBasic] = useState(false);
 
@@ -72,88 +79,50 @@ export default function NavPage() {
                 </Container>
             </Navbar>
 
-{/* 
-            <div className="row">
-                <div className="col-md-6"></div>
-                <div className="col-md-6">    
-                    <img src="./images/banner-right.png" className='img-fluid' alt="" />
-                </div>
-
-            </div> */}
-            {/* 
-            <div
-                className='p-5 text-center bg-image'
-                style={{ backgroundImage: "url('./images/secOneBg.png')", height: '80vh' }}> */}
-
-
-
-            {/* <div class="outer-BannerCont">
+            <div class="inner-BannerCont">
                 <div className="container">
+
                     <div className="row">
-                        <div className="col-12">
-                            <img src="./images/Desktop-2.png" className='img-fluid' alt="" />
-                        </div>
-                    </div> */}
-            {/* <div className="row">
-                        <div className="col-12 px-0">
-                            <div class="inner-BannerCont">
-
-                                <div className='text-start'>
+                        <div className="col-md-6 ">
 
 
-                                    <h1 className='mb-3'>"Sereni Tea Hills - Tea for Your Peaceful Moments" </h1>
+                            <div className='text-start'>
+
+
+                                <h1 className='mb-3'>Sereni Tea Hills - Tea for Your Peaceful Moments</h1>
 
 
 
-                                    <div className="col-10 text-start">  <h6> Discover the finest teas, handpicked from lush hills, and delivered to your doorstep. <br /> Indulge in a serene tea experience with every sip. Enjoy the perfect blend of flavor and tranquility from SereniTea Hills.</h6>
-                                    </div>
-
-
-                                    <button className='bannnerBtn'>
-                                        Buy Now
-                                    </button>
-
+                                <div className="col-10 text-start">  <h6> Discover the finest teas, handpicked from lush hills, and delivered to your doorstep. <br /> Indulge in a serene tea experience with every sip. Enjoy the perfect blend of flavor and tranquility from SereniTea Hills.</h6>
                                 </div>
 
 
-                            </div>
-                        </div>
-                    </div> */}
+                                <button className='bannnerBtn'>
+                                    Buy Now
+                                </button>
 
-            {/* 
-                </div> */}
-
-
-
-
-
-
-            {/* <div className='mask p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', height: '100vh' }} >
-                    <div className='d-flex justify-content-center align-items-center w-100'>
-
-
-
-                        <div className='text-white'>
-
-
-                            <h1> Welcome to Sereni Tea Hills </h1>
-
-
-
-                            <div className="col-10 text-center">  <p> Discover the finest teas, handpicked from lush hills, and delivered to your doorstep. Indulge in a serene tea experience with every sip. Enjoy the perfect blend of flavor and tranquility from SereniTea Hills.</p>
                             </div>
 
 
-
-
-                  
                         </div>
 
-
+                        <div className="col-md-6">
+                            <img src="../images/lemonTea.png" alt="" className='img-fluid' />
+                        </div>
                     </div>
-                </div> */}
-            {/* </div> */}
-            {/* </div> */}
+
+
+                    <div className="row">
+                     
+                        <div className="col-12 text-center d-flex justify-content-center">
+                            <span className="contacticon"><AiFillInstagram /> </span>
+                            <span className="contacticon"><FaFacebookF /> </span>
+                            <span className="contacticon"><FaTwitter /> </span>
+                            <span className="contacticon"><IoLogoWhatsapp /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header >
     );
 }
