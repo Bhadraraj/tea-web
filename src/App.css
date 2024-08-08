@@ -408,9 +408,55 @@ input {
   border-radius: 1px 20px;
   transition: 1s;
 }
+
 /* .bannnerBtn:hover {
   background-color: var(--secondary-color);
 } */
+.prodCardImg img {
+  border-radius: 15px 15px 0px 0px;
+  height: 200px;
+  width: 100%;
+}
+
+.aboutUs h3 {
+  color: var(--primary-color);
+
+}
+
+.aboutUs h2 {
+  color: var(--secondary-color);
+  /* list-style-image: url(); */
+
+
+}
+
+.aboutUs li {
+  margin: 10px 0;
+  padding-left: 40px;
+  background: url('./images/iconTea.png') no-repeat left center;
+  background-size: 30px 30px;
+}
+
+
+.aboutUs li {
+  list-style-type: none;
+  line-height: 35px;
+
+}
+
+.aboutUs p,
+li {
+  line-height: 32px;
+  margin: 10px 0;
+}
+
+
+.prodCont {
+
+  background-color: #e5e7a8;
+  padding: 10px 10px 20px;
+  border-radius: 0px 0px 15px 15px;
+}
 
 .outer-BannerCont h6 {
   font-size: 18px;
@@ -436,6 +482,14 @@ input {
   align-items: center;
 }
 
+.blogSection {
+  padding: 165px 50px 50px;
+}
+
+.aboutUs{
+
+  padding: 165px 50px 50px;
+}
 .inner-BannerCont {
 
   background-color: rgba(255, 255, 255, 0.8);
@@ -447,9 +501,29 @@ input {
   border-radius: 10px;
 
 }
-.inner-BannerCont h1{
-  color:#b1b23a;
+
+.blogCardMain h5{
+  color: var(--secondary-color);
 }
+
+.blogSection h1{
+  color: var(--primary-color);
+}
+.blogCardMain{
+  height: fit-content;
+  width: fit-content;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0.2px 0.2px 3px var(--primary-color);
+}
+.blogCardMain b {
+  color: var(--primary-color);
+}
+.inner-BannerCont h1 {
+  color: #b1b23a;
+}
+
 .inner-BannerCont h6 {
   line-height: 30px;
   color: #646c1a;
@@ -457,6 +531,9 @@ input {
 
 
 
+.productPrice svg {
+  color: var(--primary-color);
+}
 
 .blackteaht img {
   height: 185px;
@@ -722,12 +799,26 @@ input[type="password"] {
 
 .abtpgimg {
   background-image: url(./images/abtpgimg.jpg);
-  height: 200px;
+  height: 400px;
   background-size: cover;
   animation-name: zoom-in;
-  transition: transform 0.3s ease-out;
+
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  animation-direction: alternate;
 }
 
+
+@keyframes zoom-in {
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.02);
+  }
+  
+}
 .abtpgimg:hover {
   transform: scale(1.01);
 }
@@ -913,12 +1004,14 @@ h2 {
 .contactUsSec .contacticon:hover svg {
   color: var(--secondary-color);
   /* transform: rotateY(360deg); */
-   transition: 1.2s;
+  transition: 1.2s;
 }
-.inner-BannerCont .contacticon svg{
+
+.inner-BannerCont .contacticon svg {
   color: var(--primary-color);
   font-size: 22px;
 }
+
 .inner-BannerCont .contacticon {
   height: 40px;
   width: 40px;
@@ -1023,6 +1116,15 @@ footer h6 {
 }
 
 
+.addToCartProd {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 22px;
+  border: none;
+  border-radius: 20px;
+
+}
+
 
 @media only screen and (min-width:992px) {
   span.navCartLeft {
@@ -1108,12 +1210,17 @@ footer h6 {
     padding: 4px 13px;
   }
 
+  .productCardOuter {
+    width: 280px;
+  }
 
   .inner-BannerCont {
-
-    padding: 20px;
-    height: fit-content;
-    padding: 130px 50px 50px;
+    padding: 100px 15px 30px;
   }
+
+
+
+
+
 
 }

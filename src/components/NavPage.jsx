@@ -10,10 +10,6 @@ import { Link } from 'react-router-dom'
 import { RiShoppingBag4Line } from "react-icons/ri";
 
 
-import { AiFillInstagram } from "react-icons/ai";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function NavPage() {
     const [showBasic, setShowBasic] = useState(false);
@@ -51,16 +47,16 @@ export default function NavPage() {
                             <Nav.Link href="#action2">
                                 <Link to='/shopnow'>  Shop Now</Link>
                             </Nav.Link>
-                            <Nav.Link href="#action2">
+                            {/* <Nav.Link href="#action2">
                                 <Link to='/ourteas'> Our Teas</Link>
-                            </Nav.Link>
+                            </Nav.Link> */}
                             <Nav.Link href="#action2">
                                 <Link to='/aboutus'> About Us</Link> </Nav.Link>
                             <Nav.Link href="#action2">
                                 <Link to='/blog'> Blogs</Link></Nav.Link>
-                            <Nav.Link href="#action2">
+                            {/* <Nav.Link href="#action2">
                                 <Link to='/contact'> Contact</Link>
-                            </Nav.Link>
+                            </Nav.Link> */}
                         </Nav>
                         <span className="d-flex navCartRight">
                             <Nav.Link href="#action1" className='cart'>
@@ -79,50 +75,7 @@ export default function NavPage() {
                 </Container>
             </Navbar>
 
-            <div class="inner-BannerCont">
-                <div className="container">
 
-                    <div className="row">
-                        <div className="col-md-6 ">
-
-
-                            <div className='text-start'>
-
-
-                                <h1 className='mb-3'>Sereni Tea Hills - Tea for Your Peaceful Moments</h1>
-
-
-
-                                <div className="col-10 text-start">  <h6> Discover the finest teas, handpicked from lush hills, and delivered to your doorstep. <br /> Indulge in a serene tea experience with every sip. Enjoy the perfect blend of flavor and tranquility from SereniTea Hills.</h6>
-                                </div>
-
-
-                                <button className='bannnerBtn'>
-                                    Buy Now
-                                </button>
-
-                            </div>
-
-
-                        </div>
-
-                        <div className="col-md-6">
-                            <img src="../images/lemonTea.png" alt="" className='img-fluid' />
-                        </div>
-                    </div>
-
-
-                    <div className="row">
-                     
-                        <div className="col-12 text-center d-flex justify-content-center">
-                            <span className="contacticon"><AiFillInstagram /> </span>
-                            <span className="contacticon"><FaFacebookF /> </span>
-                            <span className="contacticon"><FaTwitter /> </span>
-                            <span className="contacticon"><IoLogoWhatsapp /></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </header >
     );
 }

@@ -5,6 +5,7 @@ import AboutSection from './AboutSection'
 import TeaManufactProcess from './TeaManufactProcess'
 import OurTea from './OurTea'
 import ShopNowHome from './ShopNowHome'
+import BannerSectionOne from './BannerSectionOne'
 
 import ContactUs from './ContactUs'
 import OurOtherProducts from './OurOtherProducts'
@@ -14,15 +15,15 @@ const HomePage = () => {
     return (
         <div>
 
+            <BannerSectionOne />
 
-            {/* <Header /> */}
             <AboutSection />
             <TeaManufactProcess />
             <OurTea />
-     
+
             <ShopNowHome />
             <OurOtherProducts />
-            <ContactUs/>
+            <ContactUs />
 
 
 
