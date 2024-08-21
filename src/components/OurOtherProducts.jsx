@@ -45,16 +45,16 @@ const OurOtherProducts = () => {
                                     >
                                         <div className='changeht'>
                                             <img src={chocimg} alt="slide 1" className=' carousalimg img-fluid' />
-                                            <button className="legend"> <Link to="/ourteas">Homemade Chocolate</Link> </button>
+                                            {/* <button className="legend"> <Link to="/ourteas">Homemade Chocolate</Link> </button> */}
                                         </div>
                                         <div className='changeht'>
                                             <img src={varkeyimg} alt="slide 2" className='img-fluid' />
-                                            <button className="legend"> <Link to="/ourteas">Ooty Varkey</Link> </button>
+                                            {/* <button className="legend"> <Link to="/ourteas">Ooty Varkey</Link> </button> */}
                                         </div>
                                         <div className='changeht'>
                                             <img src={coffeeimg} alt="slide 3" className='img-fluid' />
 
-                                            <button className="legend"> <Link to="/ourteas">   Original Coffee</Link> </button>
+                                            {/* <button className="legend"> <Link to="/ourteas">   Original Coffee</Link> </button> */}
                                         </div>
                                     </Carousel>
                                 </div>

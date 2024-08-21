@@ -17,72 +17,61 @@ const ContactUs = () => {
 
     const [errors, setErrors] = useState({});
     const [submitted, setSubmitted] = useState(false);
-    const [responseMessage, setResponseMessage] = useState(''); // Define setResponseMessage
 
+    const validate = () => {
+        let tempErrors = {};
+        let valid = true;
 
-    const validate = (field, value) => {
-        let tempErrors = { ...errors };
-
-        switch (field) {
-            case 'name':
-                tempErrors.name = value ? '' : 'Name is required.';
-                break;
-            case 'email':
-                if (!value) {
-                    tempErrors.email = 'Email is required.';
-                } else if (!/\S+@\S+\.\S+/.test(value)) {
-                    tempErrors.email = 'Email is not valid.';
-                } else {
-                    tempErrors.email = '';
-                }
-                break;
-            case 'mobile':
-                if (!value) {
-                    tempErrors.mobile = 'Mobile number is required.';
-                } else if (!/^\d{10}$/.test(value)) {
-                    tempErrors.mobile = 'Mobile number is not valid.';
-                } else {
-                    tempErrors.mobile = '';
-                }
-                break;
-            case 'message':
-                tempErrors.message = value ? '' : 'Message is required.';
-                break;
-            default:
-                break;
+        if (!formData.name) {
+            tempErrors.name = "Name is required.";
+            valid = false;
+        }
+        if (!formData.email) {
+            tempErrors.email = "Email is required.";
+            valid = false;
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            tempErrors.email = "Email is not valid.";
+            valid = false;
+        }
+        if (!formData.mobile) {
+            tempErrors.mobile = "Mobile number is required.";
+            valid = false;
+        } else if (!/^\d{10}$/.test(formData.mobile)) { // Example: valid for 10-digit numbers
+            tempErrors.mobile = "Mobile number is not valid.";
+            valid = false;
+        }
+        if (!formData.message) {
+            tempErrors.message = "Message is required.";
+            valid = false;
         }
 
         setErrors(tempErrors);
+        return valid;
     };
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-        validate(name, value); // Validate on change
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-    
-        if (Object.values(errors).every(error => !error) && Object.values(formData).every(field => field)) {
-            axios.post('http://localhost/sereniTea/contactForm.php', formData)
+
+        if (validate()) {
+
+            axios.post('http://localhost/sereniTea/contactForm.php', formData, {
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
+            })
                 .then(response => {
-                    if (response.data.status === 'success') {
-                        setSubmitted(true);
-                        setResponseMessage('Form submitted successfully!');
-                    } else {
-                        setResponseMessage('There was an error submitting the form: ' + response.data.message);
-                    }
+                    setSubmitted(true);
+                    alert('Form submitted successfully');
                 })
                 .catch(error => {
                     console.error('There was an error submitting the form!', error);
-                    setResponseMessage('There was an error submitting the form.');
                 });
-        } else {
-            setResponseMessage('Please fix the errors before submitting.');
         }
     };
-    
 
     const getInputStyle = (field) => {
         if (!formData[field]) return null;
@@ -96,7 +85,7 @@ const ContactUs = () => {
                 <div className="row py-4 text-start p-3">
                     <div className="col-lg-6 order-lg-2">
                         {submitted && <Alert variant="success">Form submitted successfully!</Alert>}
-                        <Form onSubmit={handleSubmit}>
+                        <Form onSubmit={handleSubmit} className='mb-3'>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control
@@ -149,9 +138,9 @@ const ContactUs = () => {
                                 />
                                 <Form.Control.Feedback type="invalid">{errors.message}</Form.Control.Feedback>
                             </Form.Group>
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
+                            <div className="btnCont d-flex justify-content-center">   
+                                       <button type="submit" className='submitBtn'>Submit </button>
+                            </div>
                         </Form>
                     </div>
                     <div className="col-lg-6 order-lg-1">

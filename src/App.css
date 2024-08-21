@@ -482,20 +482,18 @@ li {
   align-items: center;
 }
 
-.blogSection {
-  padding: 165px 50px 50px;
+.blogSection , .aboutUs{
+  padding-top: 165px;
+  padding-bottom: 50PX;
 }
 
-.aboutUs{
 
-  padding: 165px 50px 50px;
-}
 .inner-BannerCont {
 
   background-color: rgba(255, 255, 255, 0.8);
   /* Light background color with transparency */
-  padding: 20px;
-  padding: 165px 50px 50px;
+  padding-top: 150px;
+padding-bottom: 50px;
 
   width: 100%;
   border-radius: 10px;
@@ -808,7 +806,15 @@ input[type="password"] {
 
   animation-direction: alternate;
 }
-
+.submitBtn{
+  background-color: var(--primary-color);
+  color:white;
+  padding:  5px 100px;
+  
+  
+  border: none;
+  border-radius: 15px;
+}
 
 @keyframes zoom-in {
   0%{
@@ -1215,7 +1221,8 @@ footer h6 {
   }
 
   .inner-BannerCont {
-    padding: 100px 15px 30px;
+    padding-top: 100px ;
+    padding-bottom: 30px;
   }
 
 
